@@ -1,0 +1,25 @@
+\doxysection{pid.\+h}
+\hypertarget{pid_8h_source}{}\label{pid_8h_source}\index{src/pid.h@{src/pid.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ PID\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ PID\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_p_i_d_a5675858b8852f73bce7e83673b12513f}{PID}}\ \{}
+\DoxyCodeLine{00012\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keywordtype}{double}\ q0;\ \ \ \ \ \ }
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordtype}{double}\ q1;\ \ \ \ \ \ }
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{double}\ q2;\ \ \ \ \ \ }
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{double}\ e\_prev1\ =\ 0.0;\ \ }
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{double}\ e\_prev2\ =\ 0.0;\ \ }
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{double}\ u\_prev\ =\ 0.0;\ \ \ }
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00028\ \ \ \ \ \mbox{\hyperlink{class_p_i_d_a5675858b8852f73bce7e83673b12513f}{PID}}(\textcolor{keywordtype}{double}\ K,\ \textcolor{keywordtype}{double}\ Ti,\ \textcolor{keywordtype}{double}\ Td,\ \textcolor{keywordtype}{double}\ Ts);}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_p_i_d_a980f21e5c28912b5c968e60c8ddfa089}{compute}}(\textcolor{keywordtype}{double}\ e);}
+\DoxyCodeLine{00036\ \};}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ PID\_H}}
+
+\end{DoxyCode}

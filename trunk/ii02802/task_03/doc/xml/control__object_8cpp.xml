@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="ru">
+  <compounddef id="control__object_8cpp" kind="file" language="C++">
+    <compoundname>control_object.cpp</compoundname>
+    <includes refid="control__object_8h" local="yes">control_object.h</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>src/control_object.cpp</label>
+        <link refid="control__object_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>control_object.h</label>
+        <link refid="control__object_8h_source"/>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+<para>Реализация класса объекта управления. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;control_object.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><ref refid="class_control_object_1a531b91ba6ee99119255dea637318e896" kindref="member">ControlObject::ControlObject</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>K,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>T,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>xi)<sp/>:<sp/>K_obj(K),<sp/>T_obj(T),<sp/>xi(xi)<sp/>{</highlight></codeline>
+<codeline lineno="9"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_control_object_1aae6a6966aa9c6f54efa4d681c47ec754" kindref="member">ControlObject::update</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>u,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dt)<sp/>{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>ddy<sp/>=<sp/>(-y<sp/>-<sp/>2.0<sp/>*<sp/>xi<sp/>*<sp/>T_obj<sp/>*<sp/>dy<sp/>+<sp/>K_obj<sp/>*<sp/>u)<sp/>/<sp/>(T_obj<sp/>*<sp/>T_obj);</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>dy<sp/>+=<sp/>ddy<sp/>*<sp/>dt;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>y<sp/>+=<sp/>dy<sp/>*<sp/>dt;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>y;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_control_object_1ae9b4a4de675dc51778f99c9a360d8bd6" kindref="member">ControlObject::getY</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>y;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="src/control_object.cpp"/>
+  </compounddef>
+</doxygen>

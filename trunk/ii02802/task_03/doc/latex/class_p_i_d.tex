@@ -1,0 +1,78 @@
+\doxysection{Класс PID}
+\hypertarget{class_p_i_d}{}\label{class_p_i_d}\index{PID@{PID}}
+
+
+Класс дискретного ПИД-\/регулятора.  
+
+
+
+
+{\ttfamily \#include $<$pid.\+h$>$}
+
+\doxysubsubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_p_i_d_a5675858b8852f73bce7e83673b12513f}{PID}} (double K, double Ti, double Td, double Ts)
+\begin{DoxyCompactList}\small\item\em Конструктор ПИД-\/регулятора. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_p_i_d_a980f21e5c28912b5c968e60c8ddfa089}{compute}} (double e)
+\begin{DoxyCompactList}\small\item\em Вычисление управляющего сигнала. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Класс дискретного ПИД-\/регулятора. 
+
+Реализует рекуррентную форму дискретного ПИД-\/регулятора\+: u(k) = u(k-\/1) + q0 \texorpdfstring{$\ast$}{*} e(k) + q1 \texorpdfstring{$\ast$}{*} e(k-\/1) + q2 \texorpdfstring{$\ast$}{*} e(k-\/2) 
+
+\label{doc-constructors}
+\Hypertarget{class_p_i_d_doc-constructors}
+\doxysubsection{Конструктор(ы)}
+\Hypertarget{class_p_i_d_a5675858b8852f73bce7e83673b12513f}\index{PID@{PID}!PID@{PID}}
+\index{PID@{PID}!PID@{PID}}
+\doxysubsubsection{\texorpdfstring{PID()}{PID()}}
+{\footnotesize\ttfamily \label{class_p_i_d_a5675858b8852f73bce7e83673b12513f} 
+PID\+::\+PID (\begin{DoxyParamCaption}\item[{double}]{K}{, }\item[{double}]{Ti}{, }\item[{double}]{Td}{, }\item[{double}]{Ts}{}\end{DoxyParamCaption})}
+
+
+
+Конструктор ПИД-\/регулятора. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em K} & Коэффициент пропорциональности. \\
+\hline
+{\em Ti} & Постоянная времени интегрирования. \\
+\hline
+{\em Td} & Постоянная времени дифференцирования. \\
+\hline
+{\em Ts} & Время дискретизации (TO). \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-func-members}
+\Hypertarget{class_p_i_d_doc-func-members}
+\doxysubsection{Методы}
+\Hypertarget{class_p_i_d_a980f21e5c28912b5c968e60c8ddfa089}\index{PID@{PID}!compute@{compute}}
+\index{compute@{compute}!PID@{PID}}
+\doxysubsubsection{\texorpdfstring{compute()}{compute()}}
+{\footnotesize\ttfamily \label{class_p_i_d_a980f21e5c28912b5c968e60c8ddfa089} 
+double PID\+::compute (\begin{DoxyParamCaption}\item[{double}]{e}{}\end{DoxyParamCaption})}
+
+
+
+Вычисление управляющего сигнала. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em e} & Текущая ошибка e(k). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Управляющий сигнал u(k). 
+\end{DoxyReturn}
+
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+src/pid.\+h\item 
+src/\mbox{\hyperlink{pid_8cpp}{pid.\+cpp}}\end{DoxyCompactItemize}

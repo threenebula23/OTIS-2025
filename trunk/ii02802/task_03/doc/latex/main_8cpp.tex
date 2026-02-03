@@ -1,0 +1,41 @@
+\doxysection{Файл src/main.cpp}
+\hypertarget{main_8cpp}{}\label{main_8cpp}\index{src/main.cpp@{src/main.cpp}}
+
+
+Основная программа моделирования ПИД-\/регулятора.  
+
+
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
+{\ttfamily \#include "{}pid.\+h"{}}\newline
+{\ttfamily \#include "{}control\+\_\+object.\+h"{}}\newline
+\doxysubsubsection*{Функции}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\begin{DoxyCompactList}\small\item\em Основная функция моделирования. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Основная программа моделирования ПИД-\/регулятора. 
+
+Эта программа моделирует дискретный ПИД-\/регулятор, применяемый к динамической системе второго порядка, представляющей объект управления. Объект моделируется передаточной функцией\+: G(s) = K / (T\texorpdfstring{$^\wedge$}{\string^}2 s\texorpdfstring{$^\wedge$}{\string^}2 + 2 ξ T s + 1)
+
+Моделирование использует метод Эйлера для дискретизации непрерывной модели. 
+
+\label{doc-func-members}
+\Hypertarget{main_8cpp_doc-func-members}
+\doxysubsection{Функции}
+\Hypertarget{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\index{main.cpp@{main.cpp}!main@{main}}
+\index{main@{main}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4} 
+int main (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Основная функция моделирования. 
+
+Моделирует управление ПИД для разных изменений уставки и выводит данные в CSV для построения графиков. 

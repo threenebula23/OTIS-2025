@@ -1,0 +1,217 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="ru">
+  <compounddef id="class_p_i_d" kind="class" language="C++" prot="public">
+    <compoundname>PID</compoundname>
+    <includes refid="pid_8h" local="no">pid.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_p_i_d_1ac6f4a7e29f84d9eb60e7f672a3665a65" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double PID::q0</definition>
+        <argsstring></argsstring>
+        <name>q0</name>
+        <qualifiedname>PID::q0</qualifiedname>
+        <briefdescription>
+<para>Коэффициент q0. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/pid.h" line="13" column="12" bodyfile="src/pid.h" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_i_d_1a84c6ee207e6449ee6082094f697f701a" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double PID::q1</definition>
+        <argsstring></argsstring>
+        <name>q1</name>
+        <qualifiedname>PID::q1</qualifiedname>
+        <briefdescription>
+<para>Коэффициент q1. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/pid.h" line="14" column="12" bodyfile="src/pid.h" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_i_d_1addf8b9728e070dc19ddbc5e80b44c550" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double PID::q2</definition>
+        <argsstring></argsstring>
+        <name>q2</name>
+        <qualifiedname>PID::q2</qualifiedname>
+        <briefdescription>
+<para>Коэффициент q2. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/pid.h" line="15" column="12" bodyfile="src/pid.h" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_i_d_1a9e9287696502b7183b65e52cfe165848" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double PID::e_prev1</definition>
+        <argsstring></argsstring>
+        <name>e_prev1</name>
+        <qualifiedname>PID::e_prev1</qualifiedname>
+        <initializer>= 0.0</initializer>
+        <briefdescription>
+<para>e(k-1) — инициализация по умолчанию </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/pid.h" line="16" column="12" bodyfile="src/pid.h" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_i_d_1af5539d613fcb09081d26ede79d6ecae6" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double PID::e_prev2</definition>
+        <argsstring></argsstring>
+        <name>e_prev2</name>
+        <qualifiedname>PID::e_prev2</qualifiedname>
+        <initializer>= 0.0</initializer>
+        <briefdescription>
+<para>e(k-2) — инициализация по умолчанию </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/pid.h" line="17" column="12" bodyfile="src/pid.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_i_d_1ab7d24c057c566a8128a654f933c2610f" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double PID::u_prev</definition>
+        <argsstring></argsstring>
+        <name>u_prev</name>
+        <qualifiedname>PID::u_prev</qualifiedname>
+        <initializer>= 0.0</initializer>
+        <briefdescription>
+<para>u(k-1) — инициализация по умолчанию </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/pid.h" line="18" column="12" bodyfile="src/pid.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_p_i_d_1a5675858b8852f73bce7e83673b12513f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>PID::PID</definition>
+        <argsstring>(double K, double Ti, double Td, double Ts)</argsstring>
+        <name>PID</name>
+        <qualifiedname>PID::PID</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>K</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>Ti</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>Td</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>Ts</declname>
+        </param>
+        <briefdescription>
+<para>Конструктор ПИД-регулятора. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>K</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Коэффициент пропорциональности. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Ti</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Постоянная времени интегрирования. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Td</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Постоянная времени дифференцирования. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Ts</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Время дискретизации (TO). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/pid.h" line="28" column="5" bodyfile="src/pid.cpp" bodystart="7" bodyend="11"/>
+      </memberdef>
+      <memberdef kind="function" id="class_p_i_d_1a980f21e5c28912b5c968e60c8ddfa089" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double PID::compute</definition>
+        <argsstring>(double e)</argsstring>
+        <name>compute</name>
+        <qualifiedname>PID::compute</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Вычисление управляющего сигнала. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>e</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Текущая ошибка e(k). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Управляющий сигнал u(k). </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/pid.h" line="35" column="12" bodyfile="src/pid.cpp" bodystart="13" bodyend="19"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Класс дискретного ПИД-регулятора. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Реализует рекуррентную форму дискретного ПИД-регулятора: u(k) = u(k-1) + q0 * e(k) + q1 * e(k-1) + q2 * e(k-2) </para>
+    </detaileddescription>
+    <location file="src/pid.h" line="11" column="1" bodyfile="src/pid.h" bodystart="11" bodyend="36"/>
+    <listofallmembers>
+      <member refid="class_p_i_d_1a980f21e5c28912b5c968e60c8ddfa089" prot="public" virt="non-virtual"><scope>PID</scope><name>compute</name></member>
+      <member refid="class_p_i_d_1a9e9287696502b7183b65e52cfe165848" prot="private" virt="non-virtual"><scope>PID</scope><name>e_prev1</name></member>
+      <member refid="class_p_i_d_1af5539d613fcb09081d26ede79d6ecae6" prot="private" virt="non-virtual"><scope>PID</scope><name>e_prev2</name></member>
+      <member refid="class_p_i_d_1a5675858b8852f73bce7e83673b12513f" prot="public" virt="non-virtual"><scope>PID</scope><name>PID</name></member>
+      <member refid="class_p_i_d_1ac6f4a7e29f84d9eb60e7f672a3665a65" prot="private" virt="non-virtual"><scope>PID</scope><name>q0</name></member>
+      <member refid="class_p_i_d_1a84c6ee207e6449ee6082094f697f701a" prot="private" virt="non-virtual"><scope>PID</scope><name>q1</name></member>
+      <member refid="class_p_i_d_1addf8b9728e070dc19ddbc5e80b44c550" prot="private" virt="non-virtual"><scope>PID</scope><name>q2</name></member>
+      <member refid="class_p_i_d_1ab7d24c057c566a8128a654f933c2610f" prot="private" virt="non-virtual"><scope>PID</scope><name>u_prev</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

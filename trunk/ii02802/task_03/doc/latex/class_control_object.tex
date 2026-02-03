@@ -1,0 +1,93 @@
+\doxysection{Класс Control\+Object}
+\hypertarget{class_control_object}{}\label{class_control_object}\index{ControlObject@{ControlObject}}
+
+
+Модель объекта управления второго порядка.  
+
+
+
+
+{\ttfamily \#include $<$control\+\_\+object.\+h$>$}
+
+\doxysubsubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_control_object_a531b91ba6ee99119255dea637318e896}{Control\+Object}} (double K, double T, double xi)
+\begin{DoxyCompactList}\small\item\em Конструктор объекта управления. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_control_object_aae6a6966aa9c6f54efa4d681c47ec754}{update}} (double u, double dt)
+\begin{DoxyCompactList}\small\item\em Обновление состояния объекта. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_control_object_ae9b4a4de675dc51778f99c9a360d8bd6}{getY}} () const
+\begin{DoxyCompactList}\small\item\em Получение текущего выхода. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Модель объекта управления второго порядка. 
+
+Моделирует динамику с использованием метода Эйлера. 
+
+\label{doc-constructors}
+\Hypertarget{class_control_object_doc-constructors}
+\doxysubsection{Конструктор(ы)}
+\Hypertarget{class_control_object_a531b91ba6ee99119255dea637318e896}\index{ControlObject@{ControlObject}!ControlObject@{ControlObject}}
+\index{ControlObject@{ControlObject}!ControlObject@{ControlObject}}
+\doxysubsubsection{\texorpdfstring{ControlObject()}{ControlObject()}}
+{\footnotesize\ttfamily \label{class_control_object_a531b91ba6ee99119255dea637318e896} 
+Control\+Object\+::\+Control\+Object (\begin{DoxyParamCaption}\item[{double}]{K}{, }\item[{double}]{T}{, }\item[{double}]{xi}{}\end{DoxyParamCaption})}
+
+
+
+Конструктор объекта управления. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em K} & Коэффициент усиления. \\
+\hline
+{\em T} & Постоянная времени. \\
+\hline
+{\em xi} & Коэффициент демпфирования. \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-func-members}
+\Hypertarget{class_control_object_doc-func-members}
+\doxysubsection{Методы}
+\Hypertarget{class_control_object_ae9b4a4de675dc51778f99c9a360d8bd6}\index{ControlObject@{ControlObject}!getY@{getY}}
+\index{getY@{getY}!ControlObject@{ControlObject}}
+\doxysubsubsection{\texorpdfstring{getY()}{getY()}}
+{\footnotesize\ttfamily \label{class_control_object_ae9b4a4de675dc51778f99c9a360d8bd6} 
+double Control\+Object\+::getY (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Получение текущего выхода. 
+
+\begin{DoxyReturn}{Возвращает}
+y 
+\end{DoxyReturn}
+\Hypertarget{class_control_object_aae6a6966aa9c6f54efa4d681c47ec754}\index{ControlObject@{ControlObject}!update@{update}}
+\index{update@{update}!ControlObject@{ControlObject}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily \label{class_control_object_aae6a6966aa9c6f54efa4d681c47ec754} 
+double Control\+Object\+::update (\begin{DoxyParamCaption}\item[{double}]{u}{, }\item[{double}]{dt}{}\end{DoxyParamCaption})}
+
+
+
+Обновление состояния объекта. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em u} & Входное управление. \\
+\hline
+{\em dt} & Шаг времени. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Новый выход y. 
+\end{DoxyReturn}
+
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+src/control\+\_\+object.\+h\item 
+src/\mbox{\hyperlink{control__object_8cpp}{control\+\_\+object.\+cpp}}\end{DoxyCompactItemize}

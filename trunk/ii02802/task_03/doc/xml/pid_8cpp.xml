@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="ru">
+  <compounddef id="pid_8cpp" kind="file" language="C++">
+    <compoundname>pid.cpp</compoundname>
+    <includes refid="pid_8h" local="yes">pid.h</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>src/pid.cpp</label>
+        <link refid="pid_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>pid.h</label>
+        <link refid="pid_8h_source"/>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+<para>Реализация класса ПИД-регулятора. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;pid.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><ref refid="class_p_i_d_1a5675858b8852f73bce7e83673b12513f" kindref="member">PID::PID</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>K,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>Ti,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>Td,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>Ts)</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/>:<sp/>q0(K<sp/>*<sp/>(1.0<sp/>+<sp/>Ts<sp/>/<sp/>Ti<sp/>+<sp/>Td<sp/>/<sp/>Ts)),</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>q1(-K<sp/>*<sp/>(1.0<sp/>+<sp/>2.0<sp/>*<sp/>Td<sp/>/<sp/>Ts)),</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>q2(K<sp/>*<sp/>Td<sp/>/<sp/>Ts)<sp/>{</highlight></codeline>
+<codeline lineno="11"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_p_i_d_1a980f21e5c28912b5c968e60c8ddfa089" kindref="member">PID::compute</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>e)<sp/>{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>u<sp/>=<sp/>u_prev<sp/>+<sp/>q0<sp/>*<sp/>e<sp/>+<sp/>q1<sp/>*<sp/>e_prev1<sp/>+<sp/>q2<sp/>*<sp/>e_prev2;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>e_prev2<sp/>=<sp/>e_prev1;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>e_prev1<sp/>=<sp/>e;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>u_prev<sp/>=<sp/>u;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>u;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="src/pid.cpp"/>
+  </compounddef>
+</doxygen>
