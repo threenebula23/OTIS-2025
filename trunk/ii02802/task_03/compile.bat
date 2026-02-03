@@ -1,57 +1,66 @@
 @echo off
-echo Building project...
+setlocal EnableDelayedExpansion
+
+echo.
+echo === Building project (Windows / MinGW) ===
+echo.
+
 if not exist build mkdir build
 cd build
 
-echo Configuring CMake...
+echo [1/4] Configuring CMake...
 cmake .. -G "MinGW Makefiles" -DCMAKE_BUILD_TYPE=Release
+
 if %errorlevel% neq 0 (
-    echo CMake configuration failed!
+    echo.
+    echo CMake configuration FAILED!
     cd ..
     pause
     exit /b %errorlevel%
 )
 
-echo Building project...
-cmake --build . --config Release
+echo.
+echo [2/4] Building main program...
+cmake --build . --config Release --target task_3_ii02802
+
 if %errorlevel% neq 0 (
-    echo Build failed!
+    echo.
+    echo Build main program FAILED!
     cd ..
     pause
     exit /b %errorlevel%
+)
+
+echo.
+echo [3/4] Building tests...
+cmake --build . --config Release --target testlab3_runner_ii02802
+
+if %errorlevel% neq 0 (
+    echo.
+    echo Build tests FAILED!
+    cd ..
+    pause
+    exit /b %errorlevel%
+)
+
+echo.
+echo [4/4] Running tests...
+if exist testlab3_runner_ii02802.exe (
+    echo Running tests...
+    .\testlab3_runner_ii02802.exe
+) else (
+    echo Test executable not found: testlab3_runner_ii02802.exe
 )
 
 echo.
 echo Running main program...
-if exist main.exe (
-    echo Found main.exe
-    .\main.exe
+if exist task_3_ii02802.exe (
+    echo Running main...
+    .\task_3_ii02802.exe
+    echo.
+    echo Results saved to: simulation_results.csv
 ) else (
-    if exist project.exe (
-        echo Found project.exe
-        .\project.exe
-    ) else (
-        if exist app.exe (
-            echo Found app.exe
-            .\app.exe
-        ) else (
-            echo Main executable not found ^(tried: main.exe, project.exe, app.exe^)
-        )
-    )
-)
-
-echo.
-echo Running tests...
-if exist task_ii2802.exe (
-    echo Found task_ii2802.exe
-    .\task_ii2802.exe
-) else (
-    if exist test\task_ii2802.exe (
-        echo Found task_ii2802.exe in test subfolder
-        .\test\task_ii2802.exe
-    ) else (
-        echo Test executable task_ii2802.exe not found!
-    )
+    echo Main executable not found: task_3_ii02802.exe
 )
 
 cd ..
