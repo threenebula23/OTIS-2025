@@ -1,11 +1,11 @@
 #include "control_object.h"
 
-/**
- * @file control_object.cpp
- * @brief Реализация класса объекта управления.
- */
+ControlObject::ControlObject(double K, double T, double xi)
+    : K_obj(K), T_obj(T), xi(xi) {}
 
-ControlObject::ControlObject(double K, double T, double xi) : K_obj(K), T_obj(T), xi(xi) {
+void ControlObject::setInitialConditions(double initial_y, double initial_dy) {
+    y = initial_y;
+    dy = initial_dy;
 }
 
 double ControlObject::update(double u, double dt) {

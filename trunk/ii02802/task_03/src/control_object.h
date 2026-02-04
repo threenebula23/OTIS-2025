@@ -1,42 +1,26 @@
 #ifndef CONTROL_OBJECT_H
 #define CONTROL_OBJECT_H
 
-/**
- * @class ControlObject
- * @brief Модель объекта управления второго порядка.
- *
- * Моделирует динамику с использованием метода Эйлера.
- */
 class ControlObject {
 private:
-    double y = 0.0; ///< Выход y
-    double dy = 0.0; ///< Производная dy/dt
-    double K_obj; ///< Коэффициент усиления K
-    double T_obj; ///< Постоянная времени T
-    double xi; ///< Коэффициент демпфирования ξ
+    double y = 0.0;
+    double dy = 0.0;
+    double K_obj;
+    double T_obj;
+    double xi;
 
 public:
-    /**
-     * @brief Конструктор объекта управления.
-     * @param K Коэффициент усиления.
-     * @param T Постоянная времени.
-     * @param xi Коэффициент демпфирования.
-     */
     ControlObject(double K, double T, double xi);
 
     /**
-     * @brief Обновление состояния объекта.
-     * @param u Входное управление.
-     * @param dt Шаг времени.
-     * @return Новый выход y.
+     * @brief Установка начальных условий объекта
+     * @param initial_y Начальная температура объекта
+     * @param initial_dy Начальная производная (обычно 0)
      */
-    double update(double u, double dt);
+    void setInitialConditions(double initial_y, double initial_dy = 0.0);
 
-    /**
-     * @brief Получение текущего выхода.
-     * @return y
-     */
+    double update(double u, double dt);
     double getY() const;
 };
 
-#endif // CONTROL_OBJECT_H
+#endif
